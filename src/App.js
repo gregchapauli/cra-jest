@@ -1,5 +1,6 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import SuperComponent from "./superComponent";
 
 function App() {
   return (
@@ -15,9 +16,10 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          greg
         </a>
       </header>
+      <SuperComponent>Salut c'est Greg</SuperComponent>
     </div>
   );
 }
