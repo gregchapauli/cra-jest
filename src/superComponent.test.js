@@ -9,8 +9,11 @@ test("Test1", () => {
 
 test("Test2", () => {
   const messageAtester = "Salut c est Greg";
+
   render(<SuperComponent>{messageAtester}</SuperComponent>);
   expect(screen.queryByText(messageAtester)).toBeNull();
+
+  //SIMULATION D'UN CLICK
   fireEvent.click(screen.getByText(/Mon super composant/i));
   expect(screen.getByText(messageAtester)).toBeInTheDocument();
 });
