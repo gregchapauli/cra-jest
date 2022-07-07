@@ -1,8 +1,8 @@
 import { render, screen } from "@testing-library/react";
-import App from "./App";
+import SuperComponent from "./superComponent";
 
 test("renders learn react link", () => {
-  render(<App />);
-  const linkElement = screen.getByText(/greg/i);
+  render(<SuperComponent />);
+  const linkElement = screen.getByText(/Mon super composant/i);
   expect(linkElement).toBeInTheDocument();
 });
