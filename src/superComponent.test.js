@@ -1,4 +1,4 @@
-import { render, screen } from "@testing-library/react";
+import { render, screen, fireEvent } from "@testing-library/react";
 import SuperComponent from "./superComponent";
 
 test("Test1", () => {
@@ -11,4 +11,6 @@ test("Test2", () => {
   const messageAtester = "Salut c est Greg";
   render(<SuperComponent>{messageAtester}</SuperComponent>);
   expect(screen.queryByText(messageAtester)).toBeNull();
+  fireEvent.click(screen.getByText(/Mon super composant/i));
+  expect(screen.getByText(messageAtester)).toBeInTheDocument();
 });
