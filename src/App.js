@@ -19,7 +19,7 @@ function App() {
           greg
         </a>
       </header>
-      <SuperComponent>Salut c'est Greg</SuperComponent>
+      <SuperComponent>Salut c est Greg</SuperComponent>
     </div>
   );
 }
