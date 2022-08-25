@@ -4,6 +4,8 @@
 //Les entrées sont bien des number
 //Les parametres autres que number retournent un message d'erreur
 
+import addition from "./addition";
+
 test("addition de 2 number", () => {
   expect(addition(5, 10)).toBe(15);
   expect(typeof addition(5, 10)).toBe("number");
