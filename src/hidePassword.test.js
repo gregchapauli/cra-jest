@@ -5,11 +5,12 @@
 //utilisation de '@testing-library/react'
 
 import { render, screen, fireEvent } from "@testing-library/react";
+import HidePassword from "./hidePassword";
 
-test("test du rendu de affichage du mdp", () => {
+test("rendu de affichage du mdp", () => {
   const mdp = "azerty123";
   render(<HidePassword>{mdp}</HidePassword>);
-  expect(screen.queryAllByText(mdp)).toBeNull();
+  expect(screen.queryByText(mdp)).toBeNull();
   fireEvent.click(screen.getByLabelText("afficher mdp"));
-  expect(screen.getAllByText({ mdp })).toBeInTheDocument();
+  expect(screen.getByText(mdp)).toBeInTheDocument();
 });
